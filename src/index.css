@@ -41,3 +41,14 @@ button:hover {
   }
 
 }
+
+
+@keyframes animloader {
+  0% {
+    box-shadow: 0 0 inset;
+  }
+
+  100% {
+    box-shadow: 0 -70px inset;
+  }
+}
