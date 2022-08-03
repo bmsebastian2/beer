@@ -1,0 +1,35 @@
+.caja {
+  margin: 20px auto 40px auto;
+  border: 3px solid #ffffff;
+  border-radius: 25px;
+  height: 40px;
+  overflow: hidden;
+  width: 230px;
+  position: relative;
+}
+select {
+  background: rgb(29, 38, 48);
+  border: none;
+  font-size: 20px;
+  height: 30px;
+  padding: 5px;
+  width: 250px;
+  color: #ffffff;
+}
+select:focus {
+  outline: none;
+}
+
+.caja::after {
+  content: '\025be';
+  display: table-cell;
+  padding-top: 7px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(29, 38, 48);
+  position: absolute;
+  top: 0;
+  right: 0px;
+  pointer-events: none;
+}
