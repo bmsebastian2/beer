@@ -1,45 +1,47 @@
-import Button from '../elements/Button';
-import Parrafo from '../elements/Parrafo';
-import '../style/Inicio.css';
-import TituloBar from '../elements/TituloBarUy';
-import Modal from '../components/Modal';
-import LetrasLiquida from '../elements/LetrasLiquida'
-
+import "../style/Inicio.css";
+import Button from "../elements/Button";
+import Parrafo from "../elements/Parrafo";
+import TituloBar from "../elements/TituloBarUy";
+import LetrasLiquida from "../elements/LetrasLiquida";
+import Modal from "../components/Modal";
+import Bienvenido from "../elements/Bienvenido";
 
 const Inicio = () => {
   return (
     <div className="containerInicio">
       <div className="containerInicioHeader">
-        <div className="">
-          <TituloBar name='Bar'/>
+        <div className="containerTituloBar">
+          <TituloBar />
         </div>
-        <div className="" style={{ display: 'flex', flexDirection: 'column' }}>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
           <Parrafo name="Buscar bares por:" tamaño="21px" />
-          <a href="#modal-one" className="btn btn-big">
-            <Button name="Mi ubicación" />
+          <a href="#modal-one">
+            <Button name="Mi ubicación"></Button>
           </a>
-          <a href="#modal-one" className="btn btn-big">
+
+          <a href="#modal-one">
             <Button name="Seleccionar" />
           </a>
         </div>
-      <LetrasLiquida/>
+
+        <div>
+          <LetrasLiquida />
+        </div>
+
         <Modal />
       </div>
 
       <div className="containerInicioFooter">
-        <p style={{ opacity: '85%' }}>
-          Bienvenido a la{' '}
-          <span
-            style={{
-              color: '#ff3d00',
-              margin: '0, 1rem 0 1rem',
-            }}
-          >
-            {' '}
-            App de bares{' '}
-          </span>{' '}
-          del Uruguay.
-        </p>
+        <div>
+          <Bienvenido />
+        </div>
+        <a href="#">Menu</a>
       </div>
     </div>
   );

@@ -1,20 +1,15 @@
-import { useState } from 'react';
-import './App.css';
-import React from 'react';
-import Inicio from './components/Inicio.jsx';
-import Spinner from './elements/Spinner';
+import { useState } from "react";
+import React from "react";
+import "./App.css";
+import Inicio from "./components/Inicio.jsx";
+import WindowsLoader from "./components/WindowsLoader";
 
 function App() {
-  const [loading, setLoading] = useState(false);
-
-  React.useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 1400);
-  }, []);
-
-  return <div className="App">{loading ? <Spinner /> : <Inicio />}</div>;
+  return (
+    <div className="App">
+      <WindowsLoader WindowOpen={<Inicio />} />
+    </div>
+  );
 }
 
 export default App;

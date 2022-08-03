@@ -1,5 +1,5 @@
-import '../style/LetrasLiquida.css';
-import Uy from '../elements/TituloBarUy'
+import "../style/LetrasLiquida.css";
+import Uy from "../elements/TituloBarUy";
 
 const LetrasLiquida = () => {
   return (
@@ -7,8 +7,8 @@ const LetrasLiquida = () => {
       <div className="liqui">
         <h1 className="border uno">Bar</h1>
         <h1 className="wave dos">Bar</h1>
-      </div>   
-      
+        <Uy />
+      </div>
     </>
   );
 };
