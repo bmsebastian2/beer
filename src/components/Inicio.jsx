@@ -1,10 +1,10 @@
 import "../style/Inicio.css";
-import Button from "../elements/Button";
 import Parrafo from "../elements/Parrafo";
 import TituloBar from "../elements/TituloBarUy";
 import LetrasLiquida from "../elements/LetrasLiquida";
 import Modal from "../components/Modal";
 import Bienvenido from "../elements/Bienvenido";
+import Ancla from "../elements/ButtonAncla";
 
 const Inicio = () => {
   return (
@@ -21,13 +21,8 @@ const Inicio = () => {
           }}
         >
           <Parrafo name="Buscar bares por:" tamaño="21px" />
-          <a href="#modal-one">
-            <Button name="Mi ubicación"></Button>
-          </a>
-
-          <a href="#modal-one">
-            <Button name="Seleccionar" />
-          </a>
+          <Ancla enlace={"#modal-one"} name="Mi Ubicaciòn" />
+          <Ancla enlace={"#modal-one"} name="Seleccionar" />
         </div>
 
         <div>
