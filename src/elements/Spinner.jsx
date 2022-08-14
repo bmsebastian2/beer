@@ -10,7 +10,7 @@ const Spinner = () => {
     color: "#ff3d00",
     borderRadius: "0 0 4px 4px",
     transform: "perspective(140px) rotateX(-45deg)",
-    animation: `animloader 1.8s linear infinite alternate`,
+    animation: `animloader 1.2s linear infinite alternate`,
   };
 
   const containerSpinner = {

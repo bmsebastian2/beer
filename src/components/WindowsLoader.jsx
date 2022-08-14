@@ -1,16 +1,16 @@
 import React from "react";
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 import Spinner from "../elements/Spinner";
 import Titulo from "../elements/TituloBarUy";
 
-const WindowsLoader = ({ WindowOpen }) => {
-  const [loading, setLoading] = useState(false);
+const WindowsLoader = () => {
+  const [loading, setLoading] = useState(true);
 
   React.useEffect(() => {
-    setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1300);
+    }, 1000);
   }, []);
 
   return (
@@ -21,7 +21,7 @@ const WindowsLoader = ({ WindowOpen }) => {
           <Titulo name="Bares" />
         </div>
       ) : (
-        WindowOpen
+        <Outlet />
       )}
     </>
   );
