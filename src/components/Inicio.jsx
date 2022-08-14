@@ -6,8 +6,12 @@ import Modal from "../components/Modal";
 import Bienvenido from "../elements/Bienvenido";
 import Ancla from "../elements/ButtonAncla";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { PosicionProvider } from "../context/LocationProvider";
 
 const Inicio = () => {
+  const { location } = useContext(PosicionProvider);
+  console.log(location);
   return (
     <div className="containerInicio">
       <div className="containerInicioHeader">
@@ -24,9 +28,9 @@ const Inicio = () => {
           <Ancla enlace={"#modal-one"} name="Mi Ubicación" />
           <Ancla enlace={"#modal-two"} name="Seleccionar" />
         </div>
-        <div>
-          <LetrasLiquida />
-        </div>
+
+        <LetrasLiquida />
+
         <Modal
           id="modal-one"
           title="Confirma tu ubicación actual."

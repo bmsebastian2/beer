@@ -1,9 +1,15 @@
-import React from 'react'
+import { createContext, useState } from "react";
 
-const LocationProvider = () => {
+export const PosicionProvider = createContext();
+
+const LocationProvider = ({ children }) => {
+  const [location, setLOcation] = useState("Pocitos");
+
   return (
-    <div>LocationProvider</div>
-  )
-}
+    <PosicionProvider.Provider value={{ location }}>
+      {children}
+    </PosicionProvider.Provider>
+  );
+};
 
-export default LocationProvider
+export default LocationProvider;
