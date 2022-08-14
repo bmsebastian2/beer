@@ -1,4 +1,4 @@
-const Button = ({ name, func }) => {
+const Button = ({ name }) => {
   const style = {
     backgroundColor: "rgb(29, 38, 48)",
     color: "white",
