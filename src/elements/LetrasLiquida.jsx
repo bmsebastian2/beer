@@ -17,7 +17,7 @@ const LetrasLiquida = () => {
       fontSize: "17.9vmin !important",
     },
     wave: {
-      color: "#f6c101",
+      color: "#f6c102",
       animation: "wave 2s ease-in-out infinite",
     },
   };
@@ -25,8 +25,8 @@ const LetrasLiquida = () => {
   return (
     <>
       <div className="liqui">
-        <h1 className="border uno">Bares</h1>
-        <h1 className="wave dos">Bares</h1>
+        <h1 className="border uno">Bar</h1>
+        <h1 className="wave dos">Bar</h1>
         <Uy />
       </div>
     </>
