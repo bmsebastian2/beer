@@ -10,7 +10,7 @@ const WindowsLoader = ({ WindowOpen }) => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1400);
+    }, 1300);
   }, []);
 
   return (

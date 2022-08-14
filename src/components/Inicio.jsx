@@ -5,6 +5,7 @@ import LetrasLiquida from "../elements/LetrasLiquida";
 import Modal from "../components/Modal";
 import Bienvenido from "../elements/Bienvenido";
 import Ancla from "../elements/ButtonAncla";
+import { Link } from "react-router-dom";
 
 const Inicio = () => {
   return (
@@ -13,7 +14,6 @@ const Inicio = () => {
         <div className="containerTituloBar">
           <TituloBar />
         </div>
-
         <div
           style={{
             display: "flex",
@@ -21,22 +21,25 @@ const Inicio = () => {
           }}
         >
           <Parrafo name="Buscar bares por:" tamaño="21px" />
-          <Ancla enlace={"#modal-one"} name="Mi Ubicaciòn" />
-          <Ancla enlace={"#modal-one"} name="Seleccionar" />
+          <Ancla enlace={"#modal-one"} name="Mi Ubicación" />
+          <Ancla enlace={"#modal-two"} name="Seleccionar" />
         </div>
-
         <div>
           <LetrasLiquida />
         </div>
-
-        <Modal />
+        <Modal
+          id="modal-one"
+          title="Confirma tu ubicación actual."
+          window={true}
+        />
+        <Modal id="modal-two" title="Seleccione ubicación." window={false} />
       </div>
 
       <div className="containerInicioFooter">
         <div>
           <Bienvenido />
         </div>
-        <a href="#">Menu</a>
+        <Link to="/IngresarBares">Ingresar Bar</Link>
       </div>
     </div>
   );
