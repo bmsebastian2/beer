@@ -1,7 +1,7 @@
 import React from "react";
 
 const IngresarBares = () => {
-  return <div>Ingresar Bares</div>;
+  return <div>IngresarBares</div>;
 };
 
 export default IngresarBares;

@@ -3,6 +3,7 @@ import React from "react";
 import Select from "../elements/Select.jsx";
 import Button from "../elements/Button";
 import { Link } from "react-router-dom";
+import PostList from "../function/PostList";
 
 const Modal = ({ id, title, window, link }) => {
   return (
@@ -19,7 +20,10 @@ const Modal = ({ id, title, window, link }) => {
         <div className="modal-body">
           {window ? (
             <p>
-              Su Ubicación es barrio: <span> Cordon </span>
+              Su Ubicación es barrio:
+              <span>
+                <PostList />
+              </span>
             </p>
           ) : (
             <Select />
