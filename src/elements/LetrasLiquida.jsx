@@ -17,7 +17,7 @@ const LetrasLiquida = () => {
       fontSize: "17.9vmin !important",
     },
     wave: {
-      color: "#f6c101",
+      color: "blue",
       animation: "wave 3s ease-in-out infinite",
     },
   };
