@@ -16,7 +16,7 @@ function App() {
         </Route>
         <Route path="/AppBusqueda" element={<AppBusqueda />} />
         <Route path="IngresarBares" element={<IngresarBares />} />
-        <Route path="*" element={<Error404 />} />;
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </div>
   );

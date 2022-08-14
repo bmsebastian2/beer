@@ -1,7 +1,11 @@
 import React from "react";
 
 const AppBusqueda = () => {
-  return <div>AppBusqueda</div>;
+  const container = style.div`
+  
+
+`;
+  return <div style={style}>ss</div>;
 };
 
 export default AppBusqueda;
