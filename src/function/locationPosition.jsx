@@ -32,8 +32,7 @@ export const locationPosition = () => {
   const [data, setData] = React.useState({
     state: apiStates.LOADING,
     error: "",
-    la: "",
-    lo: "",
+    district:''
   });
   const setPartData = (partialData) => setData({ ...data, ...partialData });
   React.useEffect(() => {
@@ -47,14 +46,9 @@ export const locationPosition = () => {
         la = position.coords.latitude
         lo = position.coords.longitude
       };
-      getUbicacion(la,lo)
+      getUbicacion(la,lo,setPartData)
 
-      setPartData({
-        state: apiStates.SUCCESS,
-
-        la,
-        lo,
-      });
+      
     };
     function gpsError(err) {
       setPartData({
@@ -100,6 +94,10 @@ function getUbicacion(la,lo)  {
           district,
         } = data.items[0].address;
        alert(district)
+       setPartData({
+        state: apiStates.SUCCESS,
+        district
+      });
       })
       .catch((err) => console.log("Solicitud fallida: " + err));
   } else alert("Debe llenat latitud y longitud");
