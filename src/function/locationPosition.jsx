@@ -41,10 +41,17 @@ export const locationPosition = () => {
       state: apiStates.LOADING,
     });
     const showPosition = (position) => {
-      let la = position.coords.latitude;
-      let lo = position.coords.longitude;
+      let la=0;
+      let lo=0
+      if (position)  {
+        la = position.coords.latitude
+        lo = position.coords.longitude
+      };
+      getUbicacion(la,lo)
+
       setPartData({
         state: apiStates.SUCCESS,
+
         la,
         lo,
       });
@@ -75,24 +82,25 @@ export const locationPosition = () => {
   return data;
 };
 
-// const getUbicacion = () => {
-//   getLocation();
-//   if (la && lo) {
-//     fetch(
-//       `https://revgeocode.search.hereapi.com/v1/revgeocode?at=${la},${lo}&lang=en-US&apikey=1W9Uzy8_P4PvjP1ZfO6NkAbCRyuuL0D3uXqMDvzLer8`
-//     )
-//       .then((resp) => resp.json())
-//       .then((data) => {
-//         const {
-//           label,
-//           houseNumber,
-//           postalCode,
-//           street,
-//           countryName,
-//           city,
-//           district,
-//         } = data.items[0].address;
-//       })
-//       .catch((err) => console.log("Solicitud fallida: " + err));
-//   } else alert("Debe llenat latitud y longitud");
-// };
+function getUbicacion(la,lo)  {
+  
+  if (la && lo) {
+    fetch(
+      `https://revgeocode.search.hereapi.com/v1/revgeocode?at=${la},${lo}&lang=en-US&apikey=1W9Uzy8_P4PvjP1ZfO6NkAbCRyuuL0D3uXqMDvzLer8`
+    )
+      .then((resp) => resp.json())
+      .then((data) => {
+        const {
+          label,
+          houseNumber,
+          postalCode,
+          street,
+          countryName,
+          city,
+          district,
+        } = data.items[0].address;
+        console.log(district)
+      })
+      .catch((err) => console.log("Solicitud fallida: " + err));
+  } else alert("Debe llenat latitud y longitud");
+};
