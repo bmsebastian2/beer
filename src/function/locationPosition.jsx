@@ -40,13 +40,8 @@ export const locationPosition = () => {
       state: apiStates.LOADING,
     });
     const showPosition = (position) => {
-      let la=0;
-      let lo=0
-      if (position)  {
-        la = position.coords.latitude
-        lo = position.coords.longitude
-      };
-      getUbicacion(la,lo,setPartData)
+     
+      getUbicacion(position, setPartData)
 
       
     };
@@ -76,9 +71,13 @@ export const locationPosition = () => {
   return data;
 };
 
-function getUbicacion(la,lo)  {
+function getUbicacion(position, setPartData)  {
+   
   
-  if (la && lo) {
+  if (position) {
+      let la = position.coords.latitude
+      let lo = position.coords.longitude
+
     fetch(
       `https://revgeocode.search.hereapi.com/v1/revgeocode?at=${la},${lo}&lang=en-US&apikey=1W9Uzy8_P4PvjP1ZfO6NkAbCRyuuL0D3uXqMDvzLer8`
     )
