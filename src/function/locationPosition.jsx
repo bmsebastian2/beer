@@ -1,25 +1,3 @@
-// let la = "";
-// let lo = "";
-
-// const showPosition = (position) => {
-//   la = position.coords.latitude;
-//   lo = position.coords.longitude;
-// };
-// function gpsError(err) {
-//   console.warn(`Error: ${err.code}, ${err.message}`);
-//   showPosition();
-// }
-// const opciones = {
-//   enableHighAccuracy: true,
-//   maximumAge: 30000,
-//   timeout: 27000,
-// };
-
-// const getLocation = () => {
-//   navigator.geolocation.getCurrentPosition(showPosition, gpsError, opciones);
-// };
-
-// export default { la, lo };
 import React from "react";
 import searcherror from '../function/ErrorLocation'
 export const apiStates = {
@@ -40,11 +18,12 @@ export const locationPosition = () => {
       state: apiStates.LOADING,
     });
     const showPosition = (position) => {
-     
-      getUbicacion(position, setPartData)
 
+      if(position){        
+        getUbicacion(position, setPartData)     
+      }    
       
-    };
+    }
     function gpsError(err) {
       setPartData({
         state: apiStates.ERROR,
@@ -71,10 +50,8 @@ export const locationPosition = () => {
   return data;
 };
 
-function getUbicacion(position, setPartData)  {
-   
+function getUbicacion(position, setPartData)  {  
   
-  if (position) {
       let la = position.coords.latitude
       let lo = position.coords.longitude
 
@@ -91,13 +68,11 @@ function getUbicacion(position, setPartData)  {
           countryName,
           city,
           district,
-        } = data.items[0].address;
-       alert(district)
+        } = data.items[0].address;      
        setPartData({
         state: apiStates.SUCCESS,
         district
       });
-      })
-      .catch((err) => console.log("Solicitud fallida: " + err));
-  } else alert("Debe llenat latitud y longitud");
+      })      
+
 };
