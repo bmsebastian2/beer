@@ -99,7 +99,7 @@ function getUbicacion(la,lo)  {
           city,
           district,
         } = data.items[0].address;
-        console.log(district)
+       alert(district)
       })
       .catch((err) => console.log("Solicitud fallida: " + err));
   } else alert("Debe llenat latitud y longitud");
