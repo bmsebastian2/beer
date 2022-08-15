@@ -6,7 +6,7 @@ const PostList = () => {
 
   switch (state) {
     case apiStates.ERROR:
-      return <span>ERROR: {error || "General error"}</span>;
+      return <p >{error}</p >;
     case apiStates.SUCCESS:
       return <span>{la}</span>;
     default:

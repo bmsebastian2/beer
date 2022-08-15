@@ -21,7 +21,7 @@
 
 // export default { la, lo };
 import React from "react";
-
+import searcherror from '../function/ErrorLocation'
 export const apiStates = {
   LOADING: "LOADING",
   SUCCESS: "SUCCESS",
@@ -52,7 +52,7 @@ export const locationPosition = () => {
     function gpsError(err) {
       setPartData({
         state: apiStates.ERROR,
-        error: `Error: ${err.code}, ${err.message}`,
+        error: searcherror(err.code),
       });
       showPosition();
     }

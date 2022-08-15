@@ -3,7 +3,7 @@ const Button = ({ name }) => {
     backgroundColor: "rgb(29, 38, 48)",
     color: "white",
     border: "3px solid #fff",
-    width: "10vw",
+    width: "1vw",
     height: "5vh",
     borderRadius: "25px",
     margin: "1rem",
