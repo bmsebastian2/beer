@@ -8,12 +8,14 @@ import Ancla from "../elements/ButtonAncla";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { PosicionProvider } from "../context/LocationProvider";
+import { useEffect } from "react";
 
 const Inicio = () => {
   const { location } = useContext(PosicionProvider);
   console.log(location);
+
   return (
-    <div className="containerInicio">
+    <div className="containerInicio" id="videoElement">
       <div className="containerInicioHeader">
         <div className="containerTituloBar">
           <TituloBar />
@@ -35,7 +37,6 @@ const Inicio = () => {
         <Modal id="modal-one" title="Confirma tu ubicación." window={true} />
         <Modal id="modal-two" title="Seleccione ubicación." window={false} />
       </div>
-
       <div className="containerInicioFooter">
         <div>
           <Bienvenido />

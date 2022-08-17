@@ -8,8 +8,10 @@ import IngresarBares from "./routes/IngresarBares";
 import Error404 from "./routes/Error404";
 
 function App() {
+  
+
   return (
-    <div className="App">
+    <div className="App" id="videoElement">
       <Routes>
         <Route path="/" element={<WindowsLoader />}>
           <Route path="" element={<Inicio />} />
@@ -18,6 +20,7 @@ function App() {
         <Route path="IngresarBares" element={<IngresarBares />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
+   
     </div>
   );
 }
