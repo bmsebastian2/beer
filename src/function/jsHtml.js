@@ -1,4 +1,4 @@
-if (screen.width < 720) {
+if (screen.width < 820) {
   window.open(
     "myPopupAd.html",
     "My Popup Window",
