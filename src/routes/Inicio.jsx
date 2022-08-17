@@ -32,11 +32,7 @@ const Inicio = () => {
 
         <LetrasLiquida />
 
-        <Modal
-          id="modal-one"
-          title="Confirma tu ubicación actual."
-          window={true}
-        />
+        <Modal id="modal-one" title="Confirma tu ubicación." window={true} />
         <Modal id="modal-two" title="Seleccione ubicación." window={false} />
       </div>
 
