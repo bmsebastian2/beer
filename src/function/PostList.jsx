@@ -6,11 +6,11 @@ const PostList = () => {
 
   switch (state) {
     case apiStates.ERROR:
-      return <span >{error}</span >;
+      return error;
     case apiStates.SUCCESS:
-      return <span>{district}</span>;
+      return district;
     default:
-      return <span>loading..</span>;
+      return state;
   }
 };
 export default PostList;

@@ -4,6 +4,7 @@ import Select from "../elements/Select.jsx";
 import Button from "../elements/Button";
 import { Link } from "react-router-dom";
 import PostList from "../function/PostList";
+import Parrafo from "../elements/Parrafo";
 
 const Modal = ({ id, title, window, link }) => {
   return (
@@ -19,12 +20,10 @@ const Modal = ({ id, title, window, link }) => {
 
         <div className="modal-body">
           {window ? (
-            <p>
-              Su Ubicación es barrio:
-              <span>
-                <PostList />
-              </span>
-            </p>
+            <>
+              <p>Ubicación en :</p>
+              <Parrafo name={<PostList />} tamaño="1.7rem" color="#ff3d00" />
+            </>
           ) : (
             <Select />
           )}

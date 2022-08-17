@@ -1,13 +1,14 @@
-const Parrafo = ({ name, tamaño }) => {
+import styled from "styled-components";
+
+const Parrafo = ({ name, tamaño, color }) => {
   const style = {
     fontFamily: "Edu VIC WA NT Beginner, cursive",
-    fontfamily: "Inter",
     fontStyle: "italic",
     fontWeight: "400",
     fontSize: tamaño,
-    lineHeight: "24px",
     textAlign: "center",
-    margin: "1rem",
+    margin: "0.5rem",
+    color: color ? color : "#fff",
   };
   return <p style={style}>{name}</p>;
 };

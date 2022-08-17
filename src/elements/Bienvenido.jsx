@@ -1,23 +1,18 @@
 import React from "react";
+import styled from "styled-components";
 
-const styled = {
-  parrafo: {
-    opacity: "85%",
-    margin: "0 4.5rem 0 4.5rem",
-    textAlign: "center",
-  },
-  span: {
-    margin: "0, 1rem 0 1rem",
-  },
-};
+const Parrafo = styled.p`
+  opacity: 60%;
+  text-align: center;
+
+  font-size: 0.8rem;
+  @media (max-width: 768px) {
+    margin-top: -1.7rem;
+  }
+`;
 
 const Bienvenido = () => {
-  const { parrafo, span } = styled;
-  return (
-    <p style={parrafo}>
-      Bienvenido a la <span style={span}> App de bares </span> del Uruguay.
-    </p>
-  );
+  return <Parrafo>Bienvenido a la App de bares del Uruguay.</Parrafo>;
 };
 
 export default Bienvenido;
