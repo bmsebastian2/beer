@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Inicio from "./components/Inicio.jsx";
+import Inicio from "./routes/Inicio";
 import WindowsLoader from "./components/WindowsLoader";
 import { Routes, Route } from "react-router-dom";
 import AppBusqueda from "./routes/AppBusqueda";

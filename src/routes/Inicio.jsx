@@ -18,13 +18,14 @@ const Inicio = () => {
         <div className="containerTituloBar">
           <TituloBar />
         </div>
+
         <div
           style={{
             display: "flex",
             flexDirection: "column",
           }}
         >
-          <Parrafo name="Buscar bares por:" tamaño="21px" />
+          <Parrafo name="Buscar por:" tamaño="1.7rem" />
           <Ancla enlace={"#modal-one"} name="Mi Ubicación" />
           <Ancla enlace={"#modal-two"} name="Seleccionar" />
         </div>
