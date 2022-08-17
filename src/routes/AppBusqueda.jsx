@@ -1,18 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import Menu from '../components/Menu'
 
 const AppBusqueda = () => {
   const Conta = styled.div`
     min-height: 100vh;
     min-width: 100%;
+    overflow: hidden;
+  
+   opacity: 100%;
+  
     display: flex;
     flex-direction: column;
 
     @media (min-width: 320px) {
-      background-color: white;
+
     }
     @media (min-width: 768px) {
-      background-color: blue;
+     
     }
     @media (min-width: 1200px) {
       min-height: 90vh;
@@ -20,16 +25,31 @@ const AppBusqueda = () => {
     }
   `;
   const Header = styled.div`
-    border: 1px solid blue;
     flex: 2;
+    background: linear-gradient(220.55deg, #565656 0%, #181818 100%);      
+    
+    @media (min-width: 1200px) {
+      border-top-left-radius: 3rem;
+      border-top-right-radius: 3rem;
+
+    }
   `;
   const Body = styled.div`
-    border: 1px solid blue;
-    flex: 6;
+      flex: 6;
+      background: rgb(247,247,250);
+      background: linear-gradient(3deg, rgba(247,247,250,1) 0%, rgba(255,255,255,1) 26%);
   `;
+
   const Footer = styled.div`
-    border: 1px solid blue;
-    flex: 1;
+      flex: 1;    
+      background: white;
+      background-color: #FFFFFF;
+    
+
+     @media (min-width: 1200px) {
+      border-bottom-left-radius: 3rem;
+      border-bottom-right-radius: 3rem;
+    }
   `;
 
   return (
@@ -37,7 +57,9 @@ const AppBusqueda = () => {
       <Conta>
         <Header />
         <Body />
-        <Footer />
+        <Footer>
+          <Menu/>
+        </Footer>
       </Conta>
     </>
   );

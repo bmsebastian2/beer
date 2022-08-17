@@ -13,6 +13,7 @@ export const locationPosition = () => {
     district:''
   });
   const setPartData = (partialData) => setData({ ...data, ...partialData });
+  
   React.useEffect(() => {
     setPartData({
       state: apiStates.LOADING,
