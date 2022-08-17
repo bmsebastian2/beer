@@ -1,25 +1,46 @@
 import "../style/menu.css";
 import { listButton, InvertirButton } from "../function/listButtonMenu";
 import ButtonMenu from "../elements/ButtonMenu";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const Menu = () => {
+  const menuBorder = useRef();
+  const menu = useRef();
+  const b1 = useRef();
+  const b2 = useRef();
+  const b3 = useRef();
+  const b4 = useRef();
+  const b5 = useRef();
+  const arraRef = [b1, b2, b3, b4, b5];
+
+  // const itemEls = useRef(new Array(["B0", "B1", "B2", "B3", "B4"]));
+  // console.log(itemEls.current[0][0]);
+  // {items.map(item => (
+  //  <p key={item} ref={(element) => itemEls.current.push(element)}>{item}</p>
+  // ))
+
   const reset = listButton;
   const [vButtonActive, setvButtonActive] = useState(reset);
 
   const clickItem = (id) => {
-    // if (e.target.classList[1] === "active") return;
-
     let ver = InvertirButton(id, vButtonActive);
-    console.log(ver);
     setvButtonActive(ver);
-    // let ar1 = vButtonActive.map((el) => el);
-    // console.log(ar1);
+    offsetMenuBorder(arraRef[id].current);
   };
+  function offsetMenuBorder(element) {
+    const offsetActiveItem = element.getBoundingClientRect();
+    const left =
+      Math.floor(
+        offsetActiveItem.left -
+          menu.current.offsetLeft -
+          (menuBorder.current.offsetWidth - offsetActiveItem.width) / 2
+      ) + "px";
+    menuBorder.current.style.transform = `translate3d(${left}, 0 , 0)`;
+  }
 
   return (
     <div className="containerMenu">
-      <menu className="menu">
+      <menu className="menu" ref={menu}>
         {vButtonActive.map((e, item) => (
           <ButtonMenu
             key={item}
@@ -30,10 +51,11 @@ const Menu = () => {
             color={e.color}
             active={e.active}
             clickItem={clickItem}
+            ref={arraRef[item]}
           />
         ))}
 
-        <div className="menu__border" />
+        <div className="menu__border" ref={menuBorder} />
       </menu>
 
       <div className="svg-container">
@@ -56,27 +78,3 @@ const Menu = () => {
 };
 
 export default Menu;
-
-{
-  /* <button className="menu__item active" style={{"--bgColorItem":"#ff8c00"}}>
-      <svg className="icon" viewBox="0 0 24 24">
-        <path d="M3.8,6.6h16.4" />
-        <path d="M20.2,12.1H3.8" />
-        <path d="M3.8,17.5h16.4" />
-      </svg>
-    </button>
-    <button className="menu__item" style={{"--bgColorItem":"#f54888"}}>
-      <svg className="icon" viewBox="0 0 24 24">
-        <path d="M6.7,4.8h10.7c0.3,0,0.6,0.2,0.7,0.5l2.8,7.3c0,0.1,0,0.2,0,0.3v5.6c0,0.4-0.4,0.8-0.8,0.8H3.8
-      C3.4,19.3,3,19,3,18.5v-5.6c0-0.1,0-0.2,0.1-0.3L6,5.3C6.1,5,6.4,4.8,6.7,4.8z" />
-        <path d="M3.4,12.9H8l1.6,2.8h4.9l1.5-2.8h4.6" />
-      </svg>
-    </button>
-    <button className="menu__item" style={{"--bgColorItem":"#4343f5"}}>
-      <svg className="icon" viewBox="0 0 24 24">
-        <path d="M3.4,11.9l8.8,4.4l8.4-4.4" />
-        <path d="M3.4,16.2l8.8,4.5l8.4-4.5" />
-        <path d="M3.7,7.8l8.6-4.5l8,4.5l-8,4.3L3.7,7.8z" />
-      </svg>
-      </button> */
-}

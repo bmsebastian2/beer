@@ -7,7 +7,7 @@
 
     svg {
         pointer-events: none;
-        border: 1px solid red;
+
     }
 
     .menu {
@@ -23,6 +23,7 @@
         align-items: center;
         justify-content: center;
         background-color: var(--bgColorMenu);
+
 
     }
 
