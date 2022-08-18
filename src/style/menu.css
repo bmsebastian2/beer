@@ -126,7 +126,8 @@
         .menu {
             font-size: .8em;
             padding: 0;
-            top: 2rem;
+            top: 1.3rem;
+            border: 1px solid red;
 
 
         }
