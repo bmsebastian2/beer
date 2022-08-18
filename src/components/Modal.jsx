@@ -23,6 +23,7 @@ const Modal = ({ id, title, window, link }) => {
             <>
               <p>Ubicación en :</p>
               <Parrafo name={<PostList />} tamaño="1.7rem" />
+              
             </>
           ) : (
             <Select />

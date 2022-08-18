@@ -7,7 +7,8 @@ const Button = ({ name }) => {
     height: "5vh",
     borderRadius: "25px",
     margin: "1rem",
-    minWidth: "8rem",
+
+    minWidth: "9.5rem",
     fontFamily: "Inter",
     fontStyle: "italic",
     fontWeight: "400",
