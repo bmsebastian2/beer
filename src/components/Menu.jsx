@@ -2,6 +2,7 @@ import "../style/menu.css";
 import { listButton, InvertirButton } from "../function/listButtonMenu";
 import ButtonMenu from "../elements/ButtonMenu";
 import { useState, useRef } from "react";
+import { useEffect } from "react";
 
 const Menu = () => {
   const menuBorder = useRef();
@@ -12,12 +13,6 @@ const Menu = () => {
   const b4 = useRef();
   const b5 = useRef();
   const arraRef = [b1, b2, b3, b4, b5];
-
-  // const itemEls = useRef(new Array(["B0", "B1", "B2", "B3", "B4"]));
-  // console.log(itemEls.current[0][0]);
-  // {items.map(item => (
-  //  <p key={item} ref={(element) => itemEls.current.push(element)}>{item}</p>
-  // ))
 
   const reset = listButton;
   const [vButtonActive, setvButtonActive] = useState(reset);
@@ -33,10 +28,13 @@ const Menu = () => {
       Math.floor(
         offsetActiveItem.left -
           menu.current.offsetLeft -
-          (menuBorder.current.offsetWidth - offsetActiveItem.width) / 2
+          (menuBorder.current.offsetWidth - offsetActiveItem.width) / 3
       ) + "px";
     menuBorder.current.style.transform = `translate3d(${left}, 0 , 0)`;
   }
+  useEffect(() => {
+    offsetMenuBorder(b1.current);
+  }, []);
 
   return (
     <div className="containerMenu">
