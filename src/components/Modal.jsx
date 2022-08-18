@@ -5,6 +5,7 @@ import Button from "../elements/Button";
 import { Link } from "react-router-dom";
 import PostList from "../function/PostList";
 import Parrafo from "../elements/Parrafo";
+import IconoSvg from "../elements/IconoSvg";
 
 const Modal = ({ id, title, window, link }) => {
   return (
@@ -21,9 +22,17 @@ const Modal = ({ id, title, window, link }) => {
         <div className="modal-body">
           {window ? (
             <>
-              <p>Ubicación en :</p>
-              <Parrafo name={<PostList />} tamaño="1.7rem" />
-              
+              {/* <p>Ubicación en :</p> */}
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <IconoSvg />
+                <Parrafo name={<PostList />} tamaño="1.7rem" />
+              </div>
             </>
           ) : (
             <Select />

@@ -6,14 +6,9 @@ import Modal from "../components/Modal";
 import Bienvenido from "../elements/Bienvenido";
 import Ancla from "../elements/ButtonAncla";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { PosicionProvider } from "../context/LocationProvider";
-import { useEffect } from "react";
+
 
 const Inicio = () => {
-  const { location } = useContext(PosicionProvider);
-  console.log(location);
-
   return (
     <div className="containerInicio" id="videoElement">
       <div className="containerInicioHeader">
@@ -42,6 +37,7 @@ const Inicio = () => {
           <Bienvenido />
         </div>
         <Link to="/IngresarBares">Ingresar Bar</Link>
+       
       </div>
     </div>
   );
