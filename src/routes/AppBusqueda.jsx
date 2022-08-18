@@ -10,7 +10,6 @@ const AppBusqueda = () => {
     opacity: 100%;
     display: flex;
     flex-direction: column;
-    border: 10px solid red;
 
     @media (min-width: 320px) {
     }
