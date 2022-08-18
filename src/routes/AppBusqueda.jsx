@@ -4,22 +4,20 @@ import Menu from "../components/Menu";
 
 const AppBusqueda = () => {
   const Conta = styled.div`
-    min-height: 100vh;
-    min-width: 100%;
+    min-height: 90vh;
+    width: 70%;
     overflow: hidden;
-
     opacity: 100%;
-
     display: flex;
     flex-direction: column;
 
     @media (min-width: 320px) {
     }
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 100%;
     }
     @media (min-width: 1200px) {
-      min-height: 90vh;
-      min-width: 70%;
     }
   `;
   const Header = styled.div`
@@ -47,8 +45,6 @@ const AppBusqueda = () => {
     background-color: #ffffff;
 
     @media (min-width: 1200px) {
-      border-bottom-left-radius: 3rem;
-      border-bottom-right-radius: 3rem;
     }
   `;
 
