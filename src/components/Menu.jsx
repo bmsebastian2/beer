@@ -28,7 +28,7 @@ const Menu = () => {
       Math.floor(
         offsetActiveItem.left -
           menu.current.offsetLeft -
-          (menuBorder.current.offsetWidth - offsetActiveItem.width) / 3
+          (menuBorder.current.offsetWidth - offsetActiveItem.width) / 2
       ) + "px";
     menuBorder.current.style.transform = `translate3d(${left}, 0 , 0)`;
   }

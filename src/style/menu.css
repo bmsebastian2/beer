@@ -1,14 +1,15 @@
     .containerMenu {
         box-sizing: border-box;
         --bgColorMenu: #1d1d27;
-        --duration: .7s;
-     
+        --duration: .6s;
+
 
 
     }
 
     svg {
         pointer-events: none;
+
 
     }
 
@@ -26,19 +27,16 @@
         align-items: center;
         justify-content: center;
         background-color: var(--bgColorMenu);
-
-
     }
 
     .menu__item {
-
         all: unset;
         flex-grow: 1;
         z-index: 100;
         display: flex;
         cursor: pointer;
         position: relative;
-        left: 1px;
+        /* left: -4rem; */
         border-radius: 50%;
         align-items: center;
         will-change: transform;
@@ -58,6 +56,7 @@
         position: absolute;
         transform: scale(2);
         transition: background-color var(--duration), transform var(--duration);
+
 
     }
 

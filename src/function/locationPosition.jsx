@@ -10,7 +10,9 @@ export const locationPosition = () => {
   const [data, setData] = React.useState({
     state: apiStates.LOADING,
     error: "",
-    district:''
+    district:'',
+    countryName:'',
+    city:'',
   });
   const setPartData = (partialData) => setData({ ...data, ...partialData });
   
@@ -28,14 +30,14 @@ export const locationPosition = () => {
     function gpsError(err) {
       setPartData({
         state: apiStates.ERROR,
-        error: searcherror(err.code),
+        error: searcherror(err.code),//codigo de error en este caso validamos el 1 que es inicio de gps en el navegador
       });
       showPosition();
     }
     const opciones = {
       enableHighAccuracy: true,
-      maximumAge: 30000,
-      timeout: 27000,
+      maximumAge: 0,//dispositivo no puede usar una posición almacenada en caché
+      timeout: 60000,// tardar para devolver una posición
     };
 
     const getLocation = () => {
@@ -62,17 +64,19 @@ function getUbicacion(position, setPartData)  {
       .then((resp) => resp.json())
       .then((data) => {
         const {
-          label,
-          houseNumber,
-          postalCode,
-          street,
+          // label,
+          // houseNumber,
+          // postalCode,
+          // street,
           countryName,
           city,
           district,
         } = data.items[0].address;      
        setPartData({
         state: apiStates.SUCCESS,
-        district
+        district,
+        countryName,
+        city,
       });
       })      
 
