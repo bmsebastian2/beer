@@ -23,12 +23,12 @@ const AppBusqueda = () => {
     }
   `;
   const Header = styled.div`
-    flex: 1;
+    flex: 2;
     /* background: linear-gradient(220.55deg, #565656 0%, #181818 100%); */
     background-color:#1d1d27;
     display:grid;    
     grid-template-columns:'1fr 1fr';
-    padding:2rem;
+    padding:1rem;
     // border:1px solid blue;
     
 
@@ -41,6 +41,7 @@ const AppBusqueda = () => {
    display:grid;
    grid-template-columns:2fr 1fr;
   //  border:1px solid yellow;
+   align-items: end;
    
 
   `
@@ -48,7 +49,7 @@ const AppBusqueda = () => {
    display:grid;  
    min-height: 100%;
     align-items: end;
-   margin-top:2rem;
+   margin-top:1rem;
     /* border:1px solid red; */
    padding-bottom: 0.5rem;
   
@@ -74,7 +75,7 @@ const AppBusqueda = () => {
   `
   
   const Body = styled.div`
-    flex: 7;
+    flex: 6;
     background: white;
   `;
 

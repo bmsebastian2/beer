@@ -9,6 +9,7 @@ const ButtonMenu = forwardRef(
         onClick={() => clickItem(id)}
         className={"menu__item " + active}
         style={{ "--bgColorItem": `${color}` }}
+        title='Boton'
       >
         <svg className="icon" viewBox="0 0 24 24">
           <path d={d1} />

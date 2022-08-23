@@ -48,10 +48,11 @@ const Menu = () => {
             d3={e.d3}
             color={e.color}
             active={e.active}
-            clickItem={clickItem}
+            clickItem={clickItem}            
             ref={arraRef[item]}
           />
         ))}
+        
 
         <div className="menu__border" ref={menuBorder} />
       </menu>
