@@ -21,6 +21,7 @@ const Menu = () => {
     let ver = InvertirButton(id, vButtonActive);
     setvButtonActive(ver);
     offsetMenuBorder(arraRef[id].current);
+    
   };
   function offsetMenuBorder(element) {
     const offsetActiveItem = element.getBoundingClientRect();
@@ -48,6 +49,7 @@ const Menu = () => {
             d3={e.d3}
             color={e.color}
             active={e.active}
+            text={e.text}
             clickItem={clickItem}            
             ref={arraRef[item]}
           />
