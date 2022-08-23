@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Menu from "../components/Menu";
 import Modal from "../components/Modal";
+import TituloBar from "../elements/TituloBarUy";
+
 
 const AppBusqueda = () => {
   const Conta = styled.div`
@@ -28,7 +30,7 @@ const AppBusqueda = () => {
     background-color:#1d1d27;
     display:grid;    
     grid-template-columns:'1fr 1fr';
-    padding:1rem;
+    padding:1rem 3rem 1rem 3rem;
     // border:1px solid blue;
     
 
@@ -97,7 +99,7 @@ const AppBusqueda = () => {
               <H3>Bares de Montevideo.</H3>
             </div>
             <div className="" style={{display:'flex', alignItems:'center', justifyContent:'end'}}>
-              2
+            <TituloBar/>
             </div>
 
           </HeaderIconos>
