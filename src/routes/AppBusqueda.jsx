@@ -24,7 +24,8 @@ const AppBusqueda = () => {
   `;
   const Header = styled.div`
     flex: 1;
-    background: linear-gradient(220.55deg, #565656 0%, #181818 100%);
+    /* background: linear-gradient(220.55deg, #565656 0%, #181818 100%); */
+    background-color:#1d1d27;
     display:grid;    
     grid-template-columns:'1fr 1fr';
     padding:2rem;
@@ -45,8 +46,11 @@ const AppBusqueda = () => {
   `
   const HeaderBuscar = styled.div`
    display:grid;  
-   align-self: end;
-  //  border:1px solid red;
+   min-height: 100%;
+    align-items: end;
+   margin-top:2rem;
+    /* border:1px solid red; */
+   padding-bottom: 0.5rem;
   
 
    `
