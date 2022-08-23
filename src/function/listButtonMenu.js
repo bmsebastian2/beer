@@ -21,7 +21,7 @@ const listButton = [
     d3: "M3.7,7.8l8.6-4.5l8,4.5l-8,4.3L3.7,7.8z",
     color: "#4343f5",
     active: "",
-    text:'Básico'
+    text:'3 Básico'
   },
   {
     d1: "M5.1,3.9h13.9c0.6,0,1.2,0.5,1.2,1.2v13.9c0,0.6-0.5,1.2-1.2,1.2H5.1c-0.6,0-1.2-0.5-1.2-1.2V5.1C3.9,4.4,4.4,3.9,5.1,3.9z",
@@ -45,6 +45,16 @@ const listButton = [
 ];
 
 
+const ResetButton = (id, list)  =>
+  list.map((e, item) => {
+    if (item === 0) {
+      e.active = "active";
+    } else {
+      e.active = "";
+    }
+    return e;
+  });
+
 
 const InvertirButton = (id, list) =>
   list.map((e, item) => {
@@ -55,6 +65,8 @@ const InvertirButton = (id, list) =>
     }
     return e;
   });
+  
+
 
   
-export { listButton, InvertirButton };
+export { listButton, InvertirButton, ResetButton };
