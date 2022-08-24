@@ -1,5 +1,5 @@
 import "../style/menu.css";
-import { listButton, InvertirButton } from "../function/listButtonMenu";
+import { listButton, InvertirButton, ResetButton } from "../function/listButtonMenu";
 import ButtonMenu from "../elements/ButtonMenu";
 import { useState, useRef } from "react";
 import { useEffect } from "react";
@@ -15,30 +15,32 @@ const Menu = () => {
   const arraRef = [b1, b2, b3, b4, b5];
 
   const reset = listButton;
+
   const [vButtonActive, setvButtonActive] = useState(reset);
 
   const clickItem = (id) => {
-    let ver = InvertirButton(id, vButtonActive);
-    setvButtonActive(ver);
-    offsetMenuBorder(arraRef[id].current);
+    let ver = (id!==4)?InvertirButton(id, vButtonActive):ResetButton(id, vButtonActive)
+    setvButtonActive(ver);  
+    offsetMenuBorder(arraRef[id].current);      
   };
+
   function offsetMenuBorder(element) {
     const offsetActiveItem = element.getBoundingClientRect();
     const left =
       Math.floor(
         offsetActiveItem.left -
           menu.current.offsetLeft -
-          (menuBorder.current.offsetWidth - offsetActiveItem.width) / 3
+          (menuBorder.current.offsetWidth - offsetActiveItem.width) / 2
       ) + "px";
     menuBorder.current.style.transform = `translate3d(${left}, 0 , 0)`;
   }
-  useEffect(() => {
+  useEffect(() => {   
     offsetMenuBorder(b1.current);
   }, []);
 
   return (
     <div className="containerMenu">
-      <menu className="menu" ref={menu}>
+      <div className="menu" ref={menu}>
         {vButtonActive.map((e, item) => (
           <ButtonMenu
             key={item}
@@ -48,13 +50,15 @@ const Menu = () => {
             d3={e.d3}
             color={e.color}
             active={e.active}
-            clickItem={clickItem}
+            text={e.text}
+            clickItem={clickItem}            
             ref={arraRef[item]}
           />
         ))}
+        
 
         <div className="menu__border" ref={menuBorder} />
-      </menu>
+      </div>
 
       <div className="svg-container">
         <svg viewBox="0 0 202.9 45.5">

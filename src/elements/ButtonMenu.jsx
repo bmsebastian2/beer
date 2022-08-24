@@ -1,20 +1,31 @@
 import React from "react";
 import { forwardRef } from "react";
+import { Link } from "react-router-dom";
 
-const ButtonMenu = forwardRef(
-  ({ id, d1, d2, d3, color, active, clickItem }, ref) => {
+const ButtonMenu = forwardRef( 
+  ({ id, d1, d2, d3, color, active, clickItem, text }, ref) => {
+    const WitchLink = ({children}) => <Link to="/"> {children} </Link> 
+      const With = () => {
+        return (
+         <svg className="icon" viewBox="0 0 24 24">
+          <path d={d1} />
+          <path d={d2} />
+          <path d={d3} />
+        </svg>
+        ) 
+      }
     return (
       <button
         ref={ref}
         onClick={() => clickItem(id)}
         className={"menu__item " + active}
-        style={{ "--bgColorItem": `${color}` }}
+        style={{ "--bgColorItem": `${color}`, display:'flex', flexDirection:'column'}}
+        title={text}
       >
-        <svg className="icon" viewBox="0 0 24 24">
-          <path d={d1} />
-          <path d={d2} />
-          <path d={d3} />
-        </svg>
+        <p style={{color:active? '#fff':color,  fontSize:'0.9rem'}}>{text}</p>
+
+        {id>=4?<WitchLink> <With/> </WitchLink>:<With/> }    
+       
       </button>
     );
   }

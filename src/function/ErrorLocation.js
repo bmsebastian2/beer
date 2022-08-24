@@ -1,16 +1,10 @@
 
-
-const searcherror = (key) => {
-    switch (key) {
-    case 1:
-        return 'Habilite GPS en el navegador.'
-        break;
-
-    default:
-        return 'Other error'
-        break;
+const error = {
+    1:'Habilite GPS en el navegador.'
 }
 
+const searcherror = (key) => {
+ return error[key]?error[key]:'Other error'
 }
 
 

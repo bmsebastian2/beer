@@ -12,10 +12,11 @@ const Inicio = () => {
   return (
     <div className="containerInicio" id="videoElement">
       <div className="containerInicioHeader">
+       
         <div className="containerTituloBar">
           <TituloBar />
         </div>
-
+ 
         <div
           style={{
             display: "flex",
@@ -23,8 +24,10 @@ const Inicio = () => {
           }}
         >
           <Parrafo name="Buscar por:" tamaño="1.7rem" />
+       
           <Ancla enlace={"#modal-one"} name="Mi Ubicación" />
           <Ancla enlace={"#modal-two"} name="Seleccionar" />
+          
         </div>
 
         <LetrasLiquida />
@@ -32,10 +35,11 @@ const Inicio = () => {
         <Modal id="modal-one" title="Confirma tu ubicación." window={true} />
         <Modal id="modal-two" title="Seleccione ubicación." window={false} />
       </div>
+      
       <div className="containerInicioFooter">
         <div>
           <Bienvenido />
-        </div>
+        </div><div class="myBox"></div>
         <Link to="/IngresarBares">Ingresar Bar</Link>
        
       </div>
