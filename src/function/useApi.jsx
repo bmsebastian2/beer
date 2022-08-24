@@ -1,4 +1,6 @@
 import React from "react";
+import { collection, getDocs } from "firebase/firestore";
+
 
 export const apiStates = {
   LOADING: "LOADING",
