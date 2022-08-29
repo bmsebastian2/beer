@@ -1,8 +1,8 @@
 import "../style/menu.css";
 import { listButton, InvertirButton, ResetButton } from "../function/listButtonMenu";
 import ButtonMenu from "../elements/ButtonMenu";
-import { useState, useRef } from "react";
-import { useEffect } from "react";
+import { useState, useRef,useEffect } from "react";
+
 
 const Menu = () => {
   const menuBorder = useRef();
@@ -40,6 +40,7 @@ const Menu = () => {
 
   return (
     <div className="containerMenu">
+      
       <div className="menu" ref={menu}>
         {vButtonActive.map((e, item) => (
           <ButtonMenu
@@ -75,6 +76,7 @@ const Menu = () => {
           </clipPath>
         </svg>
       </div>
+      
     </div>
   );
 };

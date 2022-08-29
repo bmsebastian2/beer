@@ -1,21 +1,16 @@
     .containerMenu {
         box-sizing: border-box;
         --bgColorMenu: #1d1d27;
-        --duration: .6s;
-
-
-
+        --duration: .5s;
     }
 
     svg {
         pointer-events: none;
 
-
     }
 
     .menu {
-
-        top: 3rem;
+        top: 1rem;
         margin: 0;
         display: flex;
         /* Works well with 100% width  */
@@ -57,25 +52,18 @@
         transform: scale(2);
         transition: background-color var(--duration), transform var(--duration);
 
-
     }
 
-
     .menu__item.active {
-
         transform: translate3d(0, -.8em, 0);
-
     }
 
     .menu__item.active::before {
-
         transform: scale(1);
         background-color: var(--bgColorItem);
-
     }
 
     .icon {
-
         width: 2.6em;
         height: 2.6em;
         stroke: white;
@@ -89,9 +77,7 @@
     }
 
     .menu__item.active .icon {
-
         animation: strok 1.5s reverse;
-
     }
 
     @keyframes strok {

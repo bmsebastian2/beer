@@ -1,22 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import Menu from "../components/Menu";
-import Modal from "../components/Modal";
 import TituloBar from "../elements/TituloBarUy";
+import Lupa from '../assets/magnifier.png'
+import Gps from '../assets/gps.png'
 
 
 const AppBusqueda = () => {
-  const Conta = styled.div`
-    min-height: 90vh;
+  
+  const ContainerAppBusqueda = styled.div`
+    height: 90vh;
     width: 70%;
-    overflow: hidden;
-    opacity: 100%;
+    overflow: hidden;   
     display: flex;
     flex-direction: column;
     color:#fff;
-
-    @media (min-width: 320px) {
-    }
+    /* @media (min-width: 320px) {
+    } */
     @media (max-width: 768px) {
       width: 100%;
       height: 100%;
@@ -24,7 +24,9 @@ const AppBusqueda = () => {
     @media (min-width: 1200px) {
     }
   `;
+
   const Header = styled.div`
+  border:1px solid yellow;
     flex: 2;
     /* background: linear-gradient(220.55deg, #565656 0%, #181818 100%); */
     background-color:#1d1d27;
@@ -33,7 +35,9 @@ const AppBusqueda = () => {
     padding:1rem 3rem 1rem 3rem;
     // border:1px solid blue;
     
-
+     @media (max-width: 768px) {
+      padding: 1rem;
+    } 
     @media (min-width: 1200px) {
       border-top-left-radius: 3rem;
       border-top-right-radius: 3rem;
@@ -41,44 +45,59 @@ const AppBusqueda = () => {
   `;
   const HeaderIconos = styled.div`
    display:grid;
-   grid-template-columns:2fr 1fr;
-  //  border:1px solid yellow;
+   grid-template-columns:1fr 1fr;
+   border:1px solid blue;
    align-items: end;
    
 
   `
   const HeaderBuscar = styled.div`
-   display:grid;  
-   min-height: 100%;
+    /* border:3px solid red; */
+    height: 3rem;
+    width:100% ;
+    display:flex;
     align-items: end;
-   margin-top:1rem;
-    /* border:1px solid red; */
-   padding-bottom: 0.5rem;
-  
+    margin-top:1rem;
+    /* border:1px solid red; */    
+   
+    
+     @media (max-width: 768px) {
+   
+      
+    }    
 
    `
+   const Ancla = styled.a`
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 1rem;
+     height:3rem;
+     width:100%;    
+     font-size: 1em;        
+     background-color: #fd683d;
+     color: rgb(29, 38, 48);;
+     border-style: solid;
+     border-radius: 13px;
+     box-shadow: -1px -2px 5px rgba(66,66,66,.36);  
+     
+     @media (max-width: 768px) {
+      width: 100%;
+      height: 100%;
+    }    
+  
+  `
    const H3 =  styled.h3`
    font-family: Edu VIC WA NT Beginner, cursive;
      font-size: 6vmin;
    `
 
-  const Ancla = styled.a`
-      padding: 7px;
-     font-size: 19px;
-     border-width: 0px;
-     border-color: #ffffff;
-     background-color: #fd683d;
-     max-height:3rem;
-     color: rgb(29, 38, 48);;
-     border-style: solid;
-     border-radius: 13px;
-     box-shadow: -1px -2px 5px rgba(66,66,66,.36);      
   
-  `
   
   const Body = styled.div`
     flex: 6;
-    background: white;
+    background: #ffff;
+    overflow-y: scroll;
   `;
 
   const Footer = styled.div`
@@ -91,29 +110,119 @@ const AppBusqueda = () => {
 
   return (
     <>
-      <Conta>
+      <ContainerAppBusqueda>
         <Header>
 
           <HeaderIconos>
-            <div className="" style={{display:'flex', alignItems:'center'}}>
+            
+            <div className="" style={{ border:'1px solid green'}}>
               <H3>Bares de Montevideo.</H3>
             </div>
-            <div className="" style={{display:'flex', alignItems:'center', justifyContent:'end'}}>
+
+            <div className="" style={{textAlign:'end', border:'1px solid gray'}}>
+              
             <TituloBar/>
             </div>
 
           </HeaderIconos>
 
           <HeaderBuscar>
-            <Ancla href="#modal-tree" >Ingrese</Ancla>
+            <Ancla href="#modal-tree" >
+              <div className=""><img src={Lupa} alt=""width="40" height="34" style={{opacity:'50%'}}/></div>              
+              <p style={{minWidth:'75%', opacity:'70%', fontSize:'0.9rem'}}>Seleccione ubicación..</p>              
+              <div className=""><img src={Gps} alt=""width="40" height="34" style={{opacity:'50%' }}/></div>  
+
+            </Ancla>
           </HeaderBuscar>
-            <Modal id="modal-tree" title="Seleccione ubicación." window={false} />
+            
         </Header>
-        <Body />
+        
+        
+        <Body>
+            <div class="card m-3">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card m-3">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div><div class="card m-3">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div><div class="card m-3">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+            <div class="card m-3">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card m-3">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div><div class="card m-3">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div><div class="card m-3">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+        </Body>
+
+
         <Footer>
           <Menu />
         </Footer>
-      </Conta>
+      </ContainerAppBusqueda>
     </>
   );
 };
