@@ -4,7 +4,6 @@ import Menu from "../components/Menu";
 import TituloBar from "../elements/TituloBarUy";
 import Lupa from '../assets/magnifier.png'
 import Gps from '../assets/gps.png'
-import '../style/appBusqueda.css'
 import TextShadown from "../elements/TextShadown";
 
 

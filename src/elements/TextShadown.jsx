@@ -5,19 +5,29 @@ const Section = styled.div`/*overflow: hidden;*/
 /* Web Font */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
 
-  width: 8em;
+  width: 18em;
   margin: 0 auto;
    font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 700;
+
+    @media (max-width: 768px) {
+        width: 10em;
+    }    
+  
    
   `
   const Parrafo = styled.p`
       margin: 0;
       text-transform: uppercase;
-      font-size: 5em;
+      font-size: 12em;
       line-height: 0.7em;
       word-wrap: break-word;
       overflow-wrap: break-word;
+    
+      @media (max-width: 768px) {
+        font-size: 7em;
+    }    
+  
   `
   const Cover = styled.div`
     color: white;  

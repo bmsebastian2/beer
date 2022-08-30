@@ -6,6 +6,7 @@ import Modal from "../components/Modal";
 import Bienvenido from "../elements/Bienvenido";
 import Ancla from "../elements/ButtonAncla";
 import { Link } from "react-router-dom";
+import LineColor from "../elements/LineColor";
 
 
 const Inicio = () => {
@@ -37,9 +38,14 @@ const Inicio = () => {
       </div>
       
       <div className="containerInicioFooter">
+        
         <div>
           <Bienvenido />
-        </div><div class="myBox"></div>
+        </div>
+        
+       
+        <LineColor/>
+
         <Link to="/IngresarBares">Ingresar Bar</Link>
        
       </div>
