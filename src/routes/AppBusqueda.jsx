@@ -4,11 +4,15 @@ import Menu from "../components/Menu";
 import TituloBar from "../elements/TituloBarUy";
 import Lupa from '../assets/magnifier.png'
 import Gps from '../assets/gps.png'
+import '../style/appBusqueda.css'
+import TextShadown from "../elements/TextShadown";
+
 
 
 const AppBusqueda = () => {
   
   const ContainerAppBusqueda = styled.div`
+  
     height: 90vh;
     width: 70%;
     overflow: hidden;   
@@ -26,7 +30,7 @@ const AppBusqueda = () => {
   `;
 
   const Header = styled.div`
-  border:1px solid yellow;
+  /* border:1px solid yellow; */
     flex: 2;
     /* background: linear-gradient(220.55deg, #565656 0%, #181818 100%); */
     background-color:#1d1d27;
@@ -46,7 +50,7 @@ const AppBusqueda = () => {
   const HeaderIconos = styled.div`
    display:grid;
    grid-template-columns:1fr 1fr;
-   border:1px solid blue;
+   /* border:1px solid blue; */
    align-items: end;
    
 
@@ -108,6 +112,7 @@ const AppBusqueda = () => {
     }
   `;
 
+
   return (
     <>
       <ContainerAppBusqueda>
@@ -115,12 +120,13 @@ const AppBusqueda = () => {
 
           <HeaderIconos>
             
-            <div className="" style={{ border:'1px solid green'}}>
+            <div className="" style={{ }}>
               <H3>Bares de Montevideo.</H3>
             </div>
 
-            <div className="" style={{textAlign:'end', border:'1px solid gray'}}>
-              
+            <div className="" style={{textAlign:'end', display:'flex', alignItems:'center'}}>
+
+            <TextShadown/>
             <TituloBar/>
             </div>
 
