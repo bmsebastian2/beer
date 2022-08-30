@@ -31,7 +31,7 @@ const Xsign = styled.div`
 `
   const H3 =  styled.h3`
    font-family: Edu VIC WA NT Beginner, cursive;
-     font-size: 4.5vmin;
+     font-size: 4.6vmin;
        @media (max-width: 768px) {
           font-size: 5.5vmin;
     } 

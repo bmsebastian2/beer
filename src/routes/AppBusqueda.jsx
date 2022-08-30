@@ -118,7 +118,7 @@ const AppBusqueda = () => {
       
      @media (max-width: 768px) {
       top:3.8rem;
-      left:-2rem;
+      left:1rem;
     } 
 
   `
