@@ -5,7 +5,7 @@ import TituloBar from "../elements/TituloBarUy";
 import Lupa from '../assets/magnifier.png'
 import Gps from '../assets/gps.png'
 import TextShadown from "../elements/TextShadown";
-
+import LineColor from '../elements/LineColor'
 
 
 const AppBusqueda = () => {
@@ -13,7 +13,7 @@ const AppBusqueda = () => {
   const ContainerAppBusqueda = styled.div`
   
     height: 90vh;
-    width: 70%;
+    width: 60%;
     overflow: hidden;   
     display: flex;
     flex-direction: column;
@@ -24,8 +24,7 @@ const AppBusqueda = () => {
       width: 100%;
       height: 100%;
     }
-    @media (min-width: 1200px) {
-    }
+   
   `;
 
   const Header = styled.div`
@@ -101,6 +100,7 @@ const AppBusqueda = () => {
     flex: 6;
     background: #ffff;
     overflow-y: scroll;
+    padding: 0.5rem;
   `;
 
   const Footer = styled.div`
@@ -124,8 +124,7 @@ const AppBusqueda = () => {
             </div>
 
             <div className="" style={{textAlign:'end', display:'flex', alignItems:'center'}}>
-
-            <TextShadown/>
+            <TextShadown/>          
             <TituloBar/>
             </div>
 
@@ -139,13 +138,12 @@ const AppBusqueda = () => {
 
             </Ancla>
           </HeaderBuscar>
-            
         </Header>
         
-        
+        <LineColor></LineColor>
         <Body>
             <div class="card m-3">
-  <div class="card-header">
+  <div class="card-header">            
     Featured
   </div>
   <div class="card-body">

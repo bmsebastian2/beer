@@ -8,10 +8,13 @@ const Section = styled.div`/*overflow: hidden;*/
   width: 18em;
   margin: 0 auto;
    font-family: 'Open Sans Condensed', sans-serif;
-  font-weight: 700;
+    font-weight: 700;
+    margin-left: 15rem;
 
     @media (max-width: 768px) {
-        width: 10em;
+        width: 13em;
+        margin-left: -5rem;
+        
     }    
   
    
@@ -19,13 +22,14 @@ const Section = styled.div`/*overflow: hidden;*/
   const Parrafo = styled.p`
       margin: 0;
       text-transform: uppercase;
-      font-size: 12em;
+      font-size: 8em;
       line-height: 0.7em;
       word-wrap: break-word;
       overflow-wrap: break-word;
     
       @media (max-width: 768px) {
-        font-size: 7em;
+        font-size: 5em;
+        
     }    
   
   `
@@ -33,6 +37,7 @@ const Section = styled.div`/*overflow: hidden;*/
     color: white;  
     margin: 0;
    padding: 1% 7% 1% 10%; 
+
   
   display: block;  `
 
@@ -42,10 +47,11 @@ const Section = styled.div`/*overflow: hidden;*/
     text-shadow: 0.05em 0.05em 0.2em rgba(10,10,10,0.9);
   `
     const Char2 = styled.span`
-     z-index: 3; 
-    margin-left: -.175em;
-    top: 1.08em;
-    text-shadow: -0.02em 0.02em 0.2em rgba(10,10,10,0.9);
+      z-index: 3; 
+      margin-left: -.175em;  
+      text-shadow: -0.02em 0.02em 0.2em rgba(10,10,10,0.9);
+      border-radius: 2rem;
+      
     
   `
     const Char3 = styled.span`
@@ -64,6 +70,7 @@ const TextShadown = () => {
                 <Char3>r</Char3>
             </Parrafo>  
             </Cover>
+         
         </Section>
     )
 }
