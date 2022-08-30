@@ -3,7 +3,7 @@ import "../style/IconoSvg.css";
 
 const IconoSvg = (tipo) => {
   return (
-    <svg class="svg-icon" viewBox="0 0 20 20">
+    <svg className="svg-icon" viewBox="0 0 20 20">
       <path
         fill="none"
         d="M10.292,4.229c-1.487,0-2.691,1.205-2.691,2.691s1.205,2.691,2.691,2.691s2.69-1.205,2.69-2.691

@@ -6,6 +6,7 @@ import Lupa from '../assets/magnifier.png'
 import Gps from '../assets/gps.png'
 import TextShadown from "../elements/TextShadown";
 import LineColor from '../elements/LineColor'
+import TextNeon from "../elements/TextNeon";
 
 
 const AppBusqueda = () => {
@@ -59,8 +60,7 @@ const AppBusqueda = () => {
     width:100% ;
     display:flex;
     align-items: end;
-    margin-top:1rem;
-    /* border:1px solid red; */    
+    margin-top:2.5rem;  
    
     
      @media (max-width: 768px) {
@@ -89,10 +89,10 @@ const AppBusqueda = () => {
     }    
   
   `
-   const H3 =  styled.h3`
-   font-family: Edu VIC WA NT Beginner, cursive;
-     font-size: 6vmin;
-   `
+  //  const H3 =  styled.h3`
+  //  font-family: Edu VIC WA NT Beginner, cursive;
+  //    font-size: 4.5vmin;
+  //  `
 
   
   
@@ -111,6 +111,18 @@ const AppBusqueda = () => {
     }
   `;
 
+  const Small = styled.div`
+    position: absolute;
+    top:8rem;
+    left:16rem;
+      
+     @media (max-width: 768px) {
+      top:3.8rem;
+      left:-2rem;
+    } 
+
+  `
+
 
   return (
     <>
@@ -119,13 +131,17 @@ const AppBusqueda = () => {
 
           <HeaderIconos>
             
-            <div className="" style={{ }}>
-              <H3>Bares de Montevideo.</H3>
+            <div>
+              {/* <H3>Bares de Montevideo.</H3> */}
+              {/* <TextNeon/> */}
             </div>
 
-            <div className="" style={{textAlign:'end', display:'flex', alignItems:'center'}}>
+            <div className="" style={{textAlign:'end', display:'flex', alignItems:'center',  position:'relative'}}>
             <TextShadown/>          
             <TituloBar/>
+            <Small>           
+                <TextNeon/>
+            </Small>
             </div>
 
           </HeaderIconos>
