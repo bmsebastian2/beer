@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<WindowsLoader />}>
           <Route path="" element={<Inicio />} />
         </Route>
-        <Route path="/AppBusqueda" element={<AppBusqueda />} />
+        <Route path="AppBusqueda" element={<AppBusqueda />} />
         <Route path="IngresarBares" element={<IngresarBares />} />
         <Route path="*" element={<Error404 />} />
       </Routes>

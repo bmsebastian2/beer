@@ -7,11 +7,14 @@ import PostList from "../function/PostList";
 import Parrafo from "../elements/Parrafo";
 import IconoSvg from "../elements/IconoSvg";
 
-const Modal = ({ id, title, window, link }) => {
+
+const Modal = ({ id, title, window}) => {
   return (
     <>
       <a href="#" className="modal" id={id} aria-hidden="true"></a>
+      
       <div className="modal-dialog">
+        
         <div className="modal-header">
           <h2>{title}</h2>
           <a href="#" className="btn-close" aria-hidden="true">
@@ -21,8 +24,7 @@ const Modal = ({ id, title, window, link }) => {
 
         <div className="modal-body">
           {window ? (
-            <>
-              {/* <p>Ubicación en :</p> */}
+            <>           
               <div
                 style={{
                   display: "flex",
@@ -64,7 +66,9 @@ const Modal = ({ id, title, window, link }) => {
             </>
           )}
         </div>
+
       </div>
+
     </>
   );
 };

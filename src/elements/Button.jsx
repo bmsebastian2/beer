@@ -3,12 +3,12 @@ const Button = ({ name }) => {
     backgroundColor: "rgb(29, 38, 48)",
     color: "white",
     border: "3px solid #fff",
-    width: "1vw",
+    width: "0.2vw",
     height: "5vh",
     borderRadius: "25px",
     margin: "1rem",
 
-    minWidth: "9.5rem",
+    minWidth: "9rem",
     fontFamily: "Inter",
     fontStyle: "italic",
     fontWeight: "400",
@@ -16,7 +16,7 @@ const Button = ({ name }) => {
     lineHeight: "1px",
   };
   return <button style={style}>{name}</button>;
-};
+}
 {
 }
 
