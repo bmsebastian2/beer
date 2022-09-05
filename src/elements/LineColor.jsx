@@ -8,6 +8,6 @@ const MyBox = styled.div`
   width: 100%
   `
 
-const LineColor = () =>  <MyBox class="myBox"></MyBox>
+const LineColor = () =>  <MyBox className="myBox"></MyBox>
 
 export default LineColor

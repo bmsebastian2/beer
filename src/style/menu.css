@@ -1,7 +1,7 @@
     .containerMenu {
         box-sizing: border-box;
         --bgColorMenu: #1d1d27;
-        --duration: .5s;
+        --duration: .3s;
     }
 
     svg {
@@ -22,6 +22,8 @@
         align-items: center;
         justify-content: center;
         background-color: var(--bgColorMenu);
+
+
     }
 
     .menu__item {
@@ -38,11 +40,9 @@
         justify-content: center;
         padding: 0.55em 0 0.85em;
         transition: transform var(--timeOut, var(--duration));
-
     }
 
     .menu__item::before {
-
         content: "";
         z-index: -1;
         width: 3em;
@@ -51,7 +51,6 @@
         position: absolute;
         transform: scale(2);
         transition: background-color var(--duration), transform var(--duration);
-
     }
 
     .menu__item.active {
@@ -60,7 +59,9 @@
 
     .menu__item.active::before {
         transform: scale(1);
-        background-color: var(--bgColorItem);
+        /* background-color: var(--bgColorItem); */
+        background-color: #fd683d;
+        ;
     }
 
     .icon {
@@ -108,6 +109,7 @@
 
         width: 0;
         height: 0;
+
     }
 
 

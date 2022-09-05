@@ -7,10 +7,8 @@ import Gps from '../assets/gps.png'
 import TextShadown from "../elements/TextShadown";
 import LineColor from '../elements/LineColor'
 import TextNeon from "../elements/TextNeon";
+import Lupulo from "../assets/Loop.png"
 
-
-const AppBusqueda = () => {
-  
   const ContainerAppBusqueda = styled.div`
   
     height: 90vh;
@@ -19,25 +17,21 @@ const AppBusqueda = () => {
     display: flex;
     flex-direction: column;
     color:#fff;
-    /* @media (min-width: 320px) {
-    } */
-    @media (max-width: 768px) {
+       @media (max-width: 768px) {
       width: 100%;
       height: 100%;
     }
    
   `;
 
+  
   const Header = styled.div`
-  /* border:1px solid yellow; */
-    flex: 2;
-    /* background: linear-gradient(220.55deg, #565656 0%, #181818 100%); */
+     flex: 2;   
     background-color:#1d1d27;
     display:grid;    
     grid-template-columns:'1fr 1fr';
     padding:1rem 3rem 1rem 3rem;
-    // border:1px solid blue;
-    
+        
      @media (max-width: 768px) {
       padding: 1rem;
     } 
@@ -48,25 +42,18 @@ const AppBusqueda = () => {
   `;
   const HeaderIconos = styled.div`
    display:grid;
-   grid-template-columns:1fr 1fr;
-   /* border:1px solid blue; */
+   grid-template-columns:1fr 1fr;  
    align-items: end;
    
 
   `
-  const HeaderBuscar = styled.div`
-    /* border:3px solid red; */
+  const HeaderBuscar = styled.div`    
     height: 3rem;
     width:100% ;
     display:flex;
     align-items: end;
     margin-top:2.5rem;  
-   
     
-     @media (max-width: 768px) {
-   
-      
-    }    
 
    `
    const Ancla = styled.a`
@@ -88,13 +75,7 @@ const AppBusqueda = () => {
       height: 100%;
     }    
   
-  `
-  //  const H3 =  styled.h3`
-  //  font-family: Edu VIC WA NT Beginner, cursive;
-  //    font-size: 4.5vmin;
-  //  `
-
-  
+  ` 
   
   const Body = styled.div`
     flex: 6;
@@ -106,9 +87,7 @@ const AppBusqueda = () => {
   const Footer = styled.div`
     flex: 1;
     background: white;
-
-    @media (min-width: 1200px) {
-    }
+   
   `;
 
   const Small = styled.div`
@@ -122,6 +101,18 @@ const AppBusqueda = () => {
     } 
 
   `
+  const ImgLupulo = styled.img`   
+    height: 20vh;
+    width: 10vw;
+       
+     @media (max-width: 768px) {
+        height: 10vh;
+        width: 20vw;
+    } 
+  `
+const AppBusqueda = () => {
+  
+
 
 
   return (
@@ -131,114 +122,46 @@ const AppBusqueda = () => {
 
           <HeaderIconos>
             
-            <div>
-              {/* <H3>Bares de Montevideo.</H3> */}
-              {/* <TextNeon/> */}
+            <div>          
+              <ImgLupulo src={Lupulo}/>
             </div>
 
-            <div className="" style={{textAlign:'end', display:'flex', alignItems:'center',  position:'relative'}}>
-            <TextShadown/>          
-            <TituloBar/>
-            <Small>           
-                <TextNeon/>
-            </Small>
+            <div style={{textAlign:'end', display:'flex', alignItems:'center',  position:'relative'}}>
+                <TextShadown/>          
+                <TituloBar/>
+                <Small>           
+                    <TextNeon/>
+                </Small>
             </div>
 
           </HeaderIconos>
 
           <HeaderBuscar>
             <Ancla href="#modal-tree" >
-              <div className=""><img src={Lupa} alt=""width="40" height="34" style={{opacity:'50%'}}/></div>              
-              <p style={{minWidth:'75%', opacity:'70%', fontSize:'0.9rem'}}>Seleccione ubicación..</p>              
-              <div className=""><img src={Gps} alt=""width="40" height="34" style={{opacity:'50%' }}/></div>  
+              
+              <div >
+                <img src={Lupa} alt=""width="40" height="34" style={{opacity:'50%'}}/>
+              </div>              
+              
+                <p style={{minWidth:'75%', opacity:'70%', fontSize:'0.9rem'}}>Seleccione ubicación..</p>              
+              
+              <div >
+                <img src={Gps} alt=""width="40" height="34" style={{opacity:'50%' }}/>
+              </div>  
 
             </Ancla>
           </HeaderBuscar>
         </Header>
-        
-        <LineColor></LineColor>
-        <Body>
-            <div class="card m-3">
-  <div class="card-header">            
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-<div class="card m-3">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div><div class="card m-3">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div><div class="card m-3">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-            <div class="card m-3">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-<div class="card m-3">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div><div class="card m-3">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div><div class="card m-3">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-        </Body>
+         
+        <LineColor/>
+         <Body>
 
 
+        </Body> 
+
+    
         <Footer>
+        
           <Menu />
         </Footer>
       </ContainerAppBusqueda>

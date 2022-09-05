@@ -49,7 +49,7 @@ const Menu = () => {
             d1={e.d1}
             d2={e.d2}
             d3={e.d3}
-            color={e.color}
+            // color={e.color}
             active={e.active}
             text={e.text}
             clickItem={clickItem}            

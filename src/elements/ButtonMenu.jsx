@@ -3,7 +3,7 @@ import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 
 const ButtonMenu = forwardRef( 
-  ({ id, d1, d2, d3, color, active, clickItem, text }, ref) => {
+  ({ id, d1, d2, d3,  active, clickItem, text }, ref) => {
     const WitchLink = ({children}) => <Link to="/"> {children} </Link> 
       const With = () => {
         return (
@@ -19,10 +19,10 @@ const ButtonMenu = forwardRef(
         ref={ref}
         onClick={() => clickItem(id)}
         className={"menu__item " + active}
-        style={{ "--bgColorItem": `${color}`, display:'flex', flexDirection:'column'}}
+        style={{  display:'flex', flexDirection:'column'}}
         title={text}
       >
-        <p style={{color:active? '#fff':color,  fontSize:'0.9rem'}}>{text}</p>
+        <p style={{color:'#fff',  fontSize:'0.7rem'}}>{text}</p>
 
         {id>=4?<WitchLink> <With/> </WitchLink>:<With/> }    
        
