@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Svg = styled.svg`
-    width: 3.5em;
-    height: 3.5em;
+    width: 3.2em;
+    height: 3.2em;
   
   /* circle{
      stroke: #fff;
