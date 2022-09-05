@@ -51,17 +51,17 @@ const Modal = ({ id, title, window}) => {
           {window ? (
             <>
               <Link to="/AppBusqueda">
-                <Button name="Si" tamaño={'30vw'} />
+                <Button name="Si" tamaño={'7rem'} />
               </Link>
 
               <a href="#modal-two" className="btn">
-                <Button name="No" tamaño={'30vw'} />
+                <Button name="No" tamaño={'7rem'} />
               </a>
             </>
           ) : (
             <>
               <Link to="/AppBusqueda">
-                <Button name="Seleccionar" tamaño={'40vw'}/>
+                <Button name="Seleccionar" tamaño={'10rem'}/>
               </Link>
             </>
           )}

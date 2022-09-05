@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const Svg = styled.svg`
-    width: 4em;
-    height: 4em;
+    width: 3.7em;
+    height: 3.7em;
   
-  circle{
+  /* circle{
      stroke: #fff;
      stroke-width: 1;
-  }
+  } */
   path, polygon, rect {
     fill: #ff3d00;
   }
