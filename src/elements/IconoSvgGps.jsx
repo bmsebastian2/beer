@@ -14,7 +14,7 @@ const Svg = styled.svg`
   }
 `
 
-const IconoSvg = () => {
+const IconoSvgGps = () => {
   return (
     <Svg  viewBox="0 0 20 20">
       <path
@@ -28,4 +28,4 @@ const IconoSvg = () => {
     </Svg>
   );
 };
-export default IconoSvg;
+export default IconoSvgGps;

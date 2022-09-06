@@ -1,5 +1,6 @@
 import "../style/LetrasLiquida.css";
-import Uy from "../elements/TituloBarUy";
+import TextUy from "./groupTextBarUy/TextUy";
+
 
 const LetrasLiquida = () => {
   return (
@@ -8,7 +9,7 @@ const LetrasLiquida = () => {
       <div className="liqui">
         <h1 className="border uno">Bar?</h1>
         <h1 className="wave dos">Bar?</h1>
-        <Uy />
+        <TextUy />
       </div>
     
     </>

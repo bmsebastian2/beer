@@ -10,3 +10,6 @@ const signUser = (auth, email, password) => {
     const errorMessage = error.message;
   });
 }
+
+
+export default {signUser}

@@ -4,8 +4,8 @@ import Select from "../elements/Select.jsx";
 import Button from "../elements/Button";
 import { Link } from "react-router-dom";
 import PostList from "../function/PostList";
-import Parrafo from "../elements/Parrafo";
-import IconoSvg from "../elements/IconoSvg";
+import TextCursivaBeginner from "../elements/TextCursivaBeginner";
+import IconoSvgGps from "../elements/IconoSvgGps";
 
 
 const Modal = ({ id, title, window}) => {
@@ -32,8 +32,8 @@ const Modal = ({ id, title, window}) => {
                   alignItems: "center",
                 }}
               >
-                <IconoSvg />
-                <Parrafo name={<PostList />} tamaño="1.7rem" />
+                <IconoSvgGps />
+                <TextCursivaBeginner name={<PostList />} tamaño="1.7rem" />
               </div>
             </>
           ) : (

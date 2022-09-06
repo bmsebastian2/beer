@@ -1,12 +1,13 @@
 import React from "react";
+
 import styled from "styled-components";
 import Menu from "../components/Menu";
-import TituloBar from "../elements/TituloBarUy";
+
+import LineColor from '../elements/LineColor'
+import TextGroupBarUy from "../elements/groupTextBarUy/TextGroupBarUy";
+
 import Lupa from '../assets/magnifier.png'
 import Gps from '../assets/gps.png'
-import TextShadown from "../elements/TextShadown";
-import LineColor from '../elements/LineColor'
-import TextNeon from "../elements/TextNeon";
 import Lupulo from "../assets/Loop.png"
 
   const ContainerAppBusqueda = styled.div`
@@ -125,15 +126,8 @@ const AppBusqueda = () => {
             <div>          
               <ImgLupulo src={Lupulo}/>
             </div>
-
-            <div style={{textAlign:'end', display:'flex', alignItems:'center',  position:'relative'}}>
-                <TextShadown/>          
-                <TituloBar/>
-                <Small>           
-                    <TextNeon/>
-                </Small>
-            </div>
-
+          
+            <TextGroupBarUy/>
           </HeaderIconos>
 
           <HeaderBuscar>

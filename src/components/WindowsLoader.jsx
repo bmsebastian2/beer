@@ -2,7 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Spinner from "../elements/Spinner";
-import Titulo from "../elements/TituloBarUy";
+import TextUy from "../elements/groupTextBarUy/TextUy";
+import TextShadown from "../elements/groupTextBarUy/TextShadown";
 
 const WindowsLoader = () => {
   const [loading, setLoading] = useState(true);
@@ -18,7 +19,8 @@ const WindowsLoader = () => {
       {loading ? (
         <div>
           <Spinner />
-          <Titulo name="Bares" />
+          <TextShadown/>
+          <TextUy/>
         </div>
       ) : (
         <Outlet />

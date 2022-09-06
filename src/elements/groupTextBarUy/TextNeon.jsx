@@ -38,11 +38,11 @@ const Xsign = styled.div`
    `
 
 const TextNeon = () => {
-     const el = useRef();
+    
+    const el = useRef()
     const randomIn = (min, max) => (
         Math.floor(Math.random() * (max - min + 1) + min)
-    )
-            
+    )            
     const mixupInterval = el => {
         const ms = randomIn(2000, 4000)
         el.current.style.setProperty('--interval', `${ms}ms`)

@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import Parrafo from "../elements/TextCursivaBeginner";
+import TextShadown from "../elements/TextShadown";
 
 
 
@@ -25,37 +27,17 @@ const ContainerMenu = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center  ;
-`
 
-const Input = styled.input`
-  box-sizing: border-box;
-  background: transparent;
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid lighten(#27282d, 25%);
-  color:  lighten(#27282d, 65%);
-  padding: 12px 6px 12px 36px;
-  font-size: 19px;
-  outline: none;
-  caret-color: rgb(229, 91, 141);
-  font-family: 'Dosis', sans-serif;
-  letter-spacing: 1.3px;
 
-  :focus{
-     border-bottom: 1px solid transparent;
-  border-image: linear-gradient(140deg, rgb(219, 98, 65) 0%, rgb(229, 91, 141) 100%);
-  border-image-slice: 1;
-  color:  lighten(#27282d, 65%);
-  }
-  ::placeholder{
-    position: absolute;
-  left: 6px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: color .3s;
+  @media (max-width: 768px){
+      height: 50vh;
+      width: 80%;
 
   }
+
+
 `
+
 
 
 const IngresarBares = () => {
@@ -63,7 +45,13 @@ const IngresarBares = () => {
   <ContainerMain>
 
     <ContainerMenu>
-      <Input/>
+
+      
+   
+        <TextShadown/>
+      <Parrafo name='Ingrese Usuario y Contraseña.' tamaño='1.7rem'/>
+
+
 
     </ContainerMenu>
 

@@ -1,6 +1,6 @@
 import "../style/Inicio.css";
-import Parrafo from "../elements/Parrafo";
-import TituloBar from "../elements/TituloBarUy";
+import TextCursivaBeginner from "../elements/TextCursivaBeginner";
+import TextUy from "../elements/groupTextBarUy/TextUy";
 import LetrasLiquida from "../elements/LetrasLiquida";
 import Modal from "../components/Modal";
 import Bienvenido from "../elements/Bienvenido";
@@ -15,7 +15,7 @@ const Inicio = () => {
       <div className="containerInicioHeader">
        
         <div className="containerTituloBar">
-          <TituloBar />
+          <TextUy />
         </div>
  
         <div
@@ -24,7 +24,7 @@ const Inicio = () => {
             flexDirection: "column",
           }}
         >
-          <Parrafo name="Buscar por:" tamaño="1.7rem" />
+          <TextCursivaBeginner name="Buscar por:" tamaño="1.7rem" />
        
           <Ancla enlace={"#modal-one"} name="Mi Ubicación" />
           <Ancla enlace={"#modal-two"} name="Seleccionar" />
