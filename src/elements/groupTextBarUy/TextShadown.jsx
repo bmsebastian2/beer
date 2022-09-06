@@ -15,7 +15,7 @@ import styled from "styled-components"
   const Cover = styled.div`
       color: white;  
       margin: 0;
-      padding: 1% 7% 1% 10%;    
+      padding: 1% 1% 1% 10%;    
       display: block;  
   `
   const Parrafo = styled.p`

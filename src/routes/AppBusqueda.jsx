@@ -6,6 +6,7 @@ import Menu from "../components/Menu";
 import LineColor from '../elements/LineColor'
 import TextGroupBarUy from "../elements/groupTextBarUy/TextGroupBarUy";
 
+
 import Lupa from '../assets/magnifier.png'
 import Gps from '../assets/gps.png'
 import Lupulo from "../assets/Loop.png"
@@ -27,7 +28,7 @@ import Lupulo from "../assets/Loop.png"
 
   
   const Header = styled.div`
-     flex: 2;   
+    flex: 2;   
     background-color:#1d1d27;
     display:grid;    
     grid-template-columns:'1fr 1fr';
@@ -91,20 +92,21 @@ import Lupulo from "../assets/Loop.png"
    
   `;
 
-  const Small = styled.div`
-    position: absolute;
-    top:8rem;
-    left:16rem;
+  // const Small = styled.div`
+  //   position: absolute;
+  //   top:8rem;
+  //   left:16rem;
       
-     @media (max-width: 768px) {
-      top:3.9rem;
-      left:-2rem;
-    } 
+  //    @media (max-width: 768px) {
+  //     top:3.9rem;
+  //     left:-2rem;
+  //   } 
 
-  `
+  // `
   const ImgLupulo = styled.img`   
     height: 20vh;
     width: 10vw;
+    opacity: 60%;
        
      @media (max-width: 768px) {
         height: 10vh;
@@ -124,10 +126,13 @@ const AppBusqueda = () => {
           <HeaderIconos>
             
             <div>          
-              <ImgLupulo src={Lupulo}/>
+              <ImgLupulo src={Lupulo}/>           
             </div>
-          
-            <TextGroupBarUy/>
+          <div>
+            <TextGroupBarUy/>          
+          </div>
+
+            
           </HeaderIconos>
 
           <HeaderBuscar>
@@ -145,6 +150,7 @@ const AppBusqueda = () => {
 
             </Ancla>
           </HeaderBuscar>
+
         </Header>
          
         <LineColor/>

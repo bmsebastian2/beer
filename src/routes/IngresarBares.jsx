@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Parrafo from "../elements/TextCursivaBeginner";
-import TextShadown from "../elements/TextShadown";
+import TextShadown from "../elements/groupTextBarUy/TextShadown";
 
 
 
