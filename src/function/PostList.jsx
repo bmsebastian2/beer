@@ -1,3 +1,4 @@
+
 import { apiStates, locationPosition } from "./locationPosition";
 
 const PostList = () => {
@@ -13,3 +14,4 @@ const PostList = () => {
   }
 };
 export default PostList;
+
