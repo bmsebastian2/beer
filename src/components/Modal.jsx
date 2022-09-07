@@ -7,14 +7,12 @@ import PostList from "../function/PostList";
 import TextCursivaBeginner from "../elements/TextCursivaBeginner";
 import IconoSvgGps from "../elements/IconoSvgGps";
 
-
-const Modal = ({ id, title, window}) => {
+const Modal = ({ id, title, window }) => {
   return (
     <>
       <a href="#" className="modal" id={id} aria-hidden="true"></a>
-      
+
       <div className="modal-dialog">
-        
         <div className="modal-header">
           <h2>{title}</h2>
           <a href="#" className="btn-close" aria-hidden="true">
@@ -24,7 +22,7 @@ const Modal = ({ id, title, window}) => {
 
         <div className="modal-body">
           {window ? (
-            <>           
+            <>
               <div
                 style={{
                   display: "flex",
@@ -51,24 +49,22 @@ const Modal = ({ id, title, window}) => {
           {window ? (
             <>
               <Link to="/AppBusqueda">
-                <Button name="Si" tamaño={'7rem'} />
+                <Button name="Si" tamaño={"5rem"} />
               </Link>
 
               <a href="#modal-two" className="btn">
-                <Button name="No" tamaño={'7rem'} />
+                <Button name="No" tamaño={"5rem"} />
               </a>
             </>
           ) : (
             <>
               <Link to="/AppBusqueda">
-                <Button name="Seleccionar" tamaño={'10rem'}/>
+                <Button name="Seleccionar" tamaño={"10rem"} />
               </Link>
             </>
           )}
         </div>
-
       </div>
-
     </>
   );
 };

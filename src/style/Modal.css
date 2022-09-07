@@ -43,7 +43,7 @@
   left: 55%;
   top: -100%;
   z-index: 11;
-  width: 20vw;
+  width: 30vw;
   -webkit-transform: translate(0, -500%);
   -ms-transform: translate(0, -500%);
   transform: translate(0, -500%);
@@ -94,9 +94,33 @@
 
   .modal-dialog {
     background: rgb(29, 38, 48);
-    left: 57vw;
     top: -100%;
-    width: 95vw;
+    width: 90vw;
+
+  }
+
+}
+
+@media (max-width:360px) {
+
+  .modal-dialog {
+    background: rgb(29, 38, 48);
+    top: -100%;
+    width: 80vw;
+    left: 65vw;
+
+  }
+
+}
+
+@media (max-width:280px) {
+
+  .modal-dialog {
+    background: rgb(29, 38, 48);
+    top: -100%;
+    width: 80vw;
+    left: 80vw;
+
   }
 
 }
