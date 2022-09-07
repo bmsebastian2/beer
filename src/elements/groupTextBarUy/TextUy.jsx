@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-const FontUy = styled.p`
-    /* border:1px solid pink; */
-    /* transform: rotate(-25deg);    */
+const FontUy = styled.p`   
     font-family: Edu VIC WA NT Beginner, cursive;
     font-size: 10vmin;  
     color: #ff3d00;     
