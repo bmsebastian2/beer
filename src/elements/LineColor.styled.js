@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MyBox = styled.div`
+export const LineColor = styled.div`
   text-align: center;
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(
@@ -13,4 +13,4 @@ export const MyBox = styled.div`
   width: 100%;
 `;
 
-/* const LineColor = () =>  <MyBox className="myBox"></MyBox> */
+
