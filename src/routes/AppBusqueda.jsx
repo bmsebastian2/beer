@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import Menu from "../components/Menu";
 
-import LineColor from '../elements/LineColor'
+import LineColor from '../elements/LineColor.styled'
 import TextGroupBarUy from "../elements/groupTextBarUy/TextGroupBarUy";
 
 
