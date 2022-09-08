@@ -74,11 +74,12 @@ function getUbicacion(position, setPartData) {
         district,
         countryName,
         city,
-      }).catch((error) => {
-        setPartData({
-          state: apiStates.ERROR,
-          error: searcherror(2), //codigo de error en este caso validamos el 1 que es inicio de gps en el navegador
-        });
+      });
+    })
+    .catch((error) => {
+      setPartData({
+        state: apiStates.ERROR,
+        error: searcherror(2), //codigo de error en este caso validamos el 1 que es inicio de gps en el navegador
       });
     });
 }

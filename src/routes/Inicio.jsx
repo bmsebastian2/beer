@@ -6,7 +6,7 @@ import Modal from "../components/Modal";
 import Bienvenido from "../elements/Bienvenido";
 import Ancla from "../elements/ButtonAncla";
 import { Link } from "react-router-dom";
-import { LineColor } from "../elements/LineColor.styled";
+import LineColor from "../elements/LineColor.styled";
 
 const Inicio = () => {
   return (
