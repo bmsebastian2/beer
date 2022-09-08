@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const LineColor = styled.div`
+const LineC = styled.div`
   text-align: center;
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(
@@ -12,5 +12,9 @@ const LineColor = styled.div`
   border-image-slice: 1;
   width: 100%;
 `;
+
+const LineColor = () => {
+  return <LineC />;
+};
 
 export default LineColor;
