@@ -14,7 +14,7 @@ const LineC = styled.div`
 `;
 
 const LineColor = () => {
-  return <LineC />;
+  return <LineC></LineC>;
 };
 
 export default LineColor;
