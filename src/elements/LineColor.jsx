@@ -1,4 +1,4 @@
-import styled from "styled-components/macros";
+import styled from "styled-components";
 
 const LineC = styled.div`
   text-align: center;
