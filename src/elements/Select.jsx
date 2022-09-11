@@ -19,23 +19,23 @@ const BoxSelect = styled.div`
       right: 0px;
       pointer-events: none;
     }
-`
+`;
 const SelectCustom = styled.select`
-      border: 3px solid #ffffff ;
-      border-radius: 25px;
-      background: rgb(29, 38, 48);
-      font-size: 18px;
-      height: 40px;
-      padding: 0 0 0 12px;
-      width: 250px;
-      color: #ffffff;
-      &:focus {
-      outline: none;
-}
-`
+  border: 3px solid #ffffff;
+  border-radius: 25px;
+  background: rgb(29, 38, 48);
+  font-size: 18px;
+  height: 40px;
+  padding: 0 0 0 12px;
+  width: 250px;
+  color: #ffffff;
+  &:focus {
+    outline: none;
+  }
+`;
 const Select = () => {
   return (
-    <BoxSelect >
+    <BoxSelect>
       <SelectCustom>
         {barriosMontevideo.map((e, items) => (
           <option key={items}>{e}</option>
