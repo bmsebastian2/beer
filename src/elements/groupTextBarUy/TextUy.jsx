@@ -9,16 +9,12 @@ const FontUy = styled.p`
     content: ".";
   }
 `;
-const style = {
-  fontFamily: "Edu VIC WA NT Beginner, cursive",
-  fontSize: "10vmin",
-  color: "#ff3d00",
-  "&::before": {
-    color: "#fff",
-    content: ".",
-  },
-};
+
 const TextUy = () => {
-  return <p style={style}>uy</p>;
+  return (
+    <>
+      <FontUy>uy</FontUy>
+    </>
+  );
 };
 export default TextUy;

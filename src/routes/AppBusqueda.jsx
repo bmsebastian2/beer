@@ -82,17 +82,7 @@ const Footer = styled.div`
   background: white;
 `;
 
-// const Small = styled.div`
-//   position: absolute;
-//   top:8rem;
-//   left:16rem;
 
-//    @media (max-width: 768px) {
-//     top:3.9rem;
-//     left:-2rem;
-//   }
-
-// `
 const ImgLupulo = styled.img`
   height: 20vh;
   width: 10vw;
