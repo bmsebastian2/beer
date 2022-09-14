@@ -1,11 +1,11 @@
 import "../style/Modal.css";
 import React from "react";
-import Select from "../elements/Select.jsx";
-import Button from "../elements/Button";
+import Select from "../elements/Select/Select.jsx";
+import Button from "../elements/ButtonCustom/Button";
 import { Link } from "react-router-dom";
 import PostList from "../function/PostList";
 import TextCursivaBeginner from "../elements/TextCursivaBeginner";
-import IconoSvgGps from "../elements/IconoSvgGps";
+import IconoSvgGps from "../elements/IconGpsvg/IconoSvgGps";
 
 const Modal = ({ id, title, window }) => {
   return (

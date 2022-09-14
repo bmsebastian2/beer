@@ -51,7 +51,6 @@ const TextNeon = () => {
   return (
     <Xsign ref={el}>
       <small>
-        {" "}
         <H3>Bares de Montevideo.</H3>
       </small>
     </Xsign>

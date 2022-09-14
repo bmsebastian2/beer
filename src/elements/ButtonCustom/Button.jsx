@@ -15,7 +15,6 @@ const Button = ({ name, tamaño }) => {
   };
   return <button style={style}>{name}</button>;
 }
-{
-}
+
 
 export default Button;

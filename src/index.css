@@ -1,3 +1,10 @@
+:root {
+  --first-color: #222016;
+  --second-color: #ffff8c;
+
+  --first-naranja: red;
+}
+
 * {
   margin: 0;
   padding: 0;
