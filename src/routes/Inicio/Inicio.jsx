@@ -6,6 +6,7 @@ import Bienvenido from "../../elements/Bienvenido";
 import Ancla from "../../elements/ButtonAncla";
 import { Link } from "react-router-dom";
 import LineColor from "../../elements/LinColor/LineColor";
+import WindowsModal from "../../components/Modal/WindowsModal";
 
 const Inicio = () => {
   return (
@@ -28,8 +29,9 @@ const Inicio = () => {
 
           <LetrasLiquida />
 
-          <Modal id="modal-one" title="Confirma tu ubicación." window={true} />
-          <Modal id="modal-two" title="Seleccione ubicación." window={false} />
+          {/* <Modal id="modal-one" title="Confirma tu ubicación." window={true} />
+          <Modal id="modal-two" title="Seleccione ubicación." window={false} /> */}
+          <WindowsModal />
         </div>
 
         <div className={styles.containerInicioFooter}>

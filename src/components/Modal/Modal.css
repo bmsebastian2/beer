@@ -88,6 +88,8 @@
 .modal-footer {
   border-top: #eee solid 1px;
   text-align: right;
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width:768px) {
