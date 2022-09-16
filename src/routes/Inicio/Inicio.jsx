@@ -1,7 +1,7 @@
 import styles from "./Inicio.module.css";
 import TextCursivaBeginner from "../../elements/TextCursivaBeginner";
 import LetrasLiquida from "../../elements/LetrasLiquid/LetrasLiquida";
-import Modal from "../../components/Modal";
+import Modal from "../../components/Modal/ContainerModal";
 import Bienvenido from "../../elements/Bienvenido";
 import Ancla from "../../elements/ButtonAncla";
 import { Link } from "react-router-dom";
