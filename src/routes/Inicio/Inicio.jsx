@@ -1,7 +1,6 @@
 import styles from "./Inicio.module.css";
 import TextCursivaBeginner from "../../elements/TextCursivaBeginner";
 import LetrasLiquida from "../../elements/LetrasLiquid/LetrasLiquida";
-import Modal from "../../components/Modal/ContainerModal";
 import Bienvenido from "../../elements/Bienvenido";
 import Ancla from "../../elements/ButtonAncla";
 import { Link } from "react-router-dom";
@@ -27,10 +26,7 @@ const Inicio = () => {
             <Ancla enlace={"#modal-two"} name="Seleccionar" />
           </div>
 
-          <LetrasLiquida />
-
-          {/* <Modal id="modal-one" title="Confirma tu ubicación." window={true} />
-          <Modal id="modal-two" title="Seleccione ubicación." window={false} /> */}
+          <LetrasLiquida />          
           <WindowsModal />
         </div>
 

@@ -1,11 +1,12 @@
 import IconoSvgGps from "../../elements/IconGpsvg/IconoSvgGps";
 import TextCursivaBeginner from "../../elements/TextCursivaBeginner";
 import PostList from "../../function/PostList";
-import Select from "../../elements/Select/Select";
+
 import Button from "../../elements/ButtonCustom/Button";
 import { Link } from "react-router-dom";
 import ContainerModal from "./ContainerModal";
 import "./Modal.css";
+import ModalSelect from "./ModalSelect";
 const WindowsModal = () => {
   return (
     <>
@@ -24,16 +25,7 @@ const WindowsModal = () => {
         </div>
       </ContainerModal>
 
-      <ContainerModal id="modal-two" title="Seleccione ubicación.">
-        <div className="modal-body">
-          <Select />
-        </div>
-        <div className="modal-footer">
-          <Link to="/AppBusqueda">
-            <Button name="Seleccionar" tamaño={"10rem"} />
-          </Link>
-        </div>
-      </ContainerModal>
+      <ModalSelect id="modal-two" direccion={"/AppBusqueda"}  />
     </>
   );
 };
